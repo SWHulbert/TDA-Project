@@ -23,10 +23,10 @@ Is a function which allow us to represent local minimums/maximums to be birth ti
 
 ### Dataset:
 The handwritten letters written in a 10x10 square board (100 pixels) are used to create the dataset where we considered the pixel value to be 0 - if there is no part of the letter in the pixel and 1 otherwise for each letter. Also an index value has been assigned for each letter.
-
-#### Sample: Data of letter ‘i’ from dataset.(Index value: 9)
+```
+Sample: Data of letter ‘i’ from dataset.(Index value: 9)
 9,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-
+```
 ### Scans:
 
 ## Getting Started
