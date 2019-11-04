@@ -1,6 +1,6 @@
 # Identification of Handwritten Letters Using Persistent Homology
 
-This project uses methods from Topology to classify handwritten letters. The letter is put onto a 10x10 grid, and a 1 is marked if any part of the letter touches the grid square. This ultimately leaves us with a 1x101 array, where the first number is an index marking the letter, and the next 100 are values from our 10x10 grid.
+This project uses methods from Topology to classify handwritten letters. The letter is put onto a 10x10 grid, and a 1 is marked if any part of the letter touches the grid square. This ultimately leaves us with a 1x101 array, where the first number is an index identifying the letter, and the next 100 are values from our 10x10 grid.
 
 ```
 Sample: Data of letter ‘i’ from dataset.(Index value: 9)
