@@ -10,8 +10,6 @@ Sample: Data of letter ‘I’ from dataset. (letterIndex: 9)
 ## Introduction
 This project uses a method from Topology called **Persistent Homology** to classify letters. Persistent Homology is a nice technique for classifying because it requires no training and is relatively robust. For example, our model gets roughly ~70% accuracy on a noisy dataset of capital leters.
 
-This program requires the Python libraries **Ripser** and **Persim** to run.
-
 ### Persistent Homology:
 Persistent Homology is an algebraic method of calculating topological features from a given set of data. The theory itself is extremely mathematically complex, but for our purposes, it serves to think of it as 'pouring water' into areas of different elevation. At first, all water will fill in the lowest elevation areas, creating 'lakes.' As more 'water' is poured in, more 'lakes' are formed, and occasionally, two 'lakes' merge into a single entity.
 
@@ -70,6 +68,8 @@ Here you can see we specificed the noisePercent = 0.02, and numberofGuesses = 50
 Originally, our model ran with 8 scans, and record the values of total number of classes, and average length of classes. However, as we added more scans, we noticed that accuracy, especially for specific letters such as A, D, O, and Y went down. Through the simple gumshoe move of testing each scan individually, then each pair of scans individually, each 3-tuple of scans, etc. we removed scans that were not contributing to our model.
 
 To do this, we first picked the scan that classified the most letters. Then we compared a model with scan X, to a model without scan X, and calculated average accuracy over all letters in the alphabet. If average accuracy went up by a significant ammount (we used "Did average accuracy increase by 3% or more" as a cutoff question for our model). After running this test, we removed 2 scans that were below the cutoff, decreasing the overall runtime of our program.
+
+Furthermore, we added a 'denoiser' functions, which removes any bit of text that's not connected to other text. It does this by going through each entry in our 1x101 array, taking any entry with the value '1' and then checking if any of the pixels around  that given pixel also have a value of '1.' If not, it replaces the pixel with a value of '0' and moves on.
 
 ## Built With
 
